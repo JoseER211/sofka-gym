@@ -39,7 +39,8 @@ class CrearActividadUseCaseTest {
 
         var events = UseCaseHandler.getInstance()
                 .syncExecutor(crearActividadUseCase, new RequestCommand<>(command))
-                .orElseThrow().getDomainEvents();
+                .orElseThrow()
+                .getDomainEvents();
 
         var actividadCreada = (ActividadCreada) events.get(0);
         Assertions.assertEquals("nnn", actividadCreada.aggregateRootId());

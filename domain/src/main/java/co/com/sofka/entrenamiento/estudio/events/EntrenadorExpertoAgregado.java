@@ -1,27 +1,27 @@
-package co.com.sofka.entrenamiento.actividad.events;
+package co.com.sofka.entrenamiento.estudio.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.entrenamiento.actividad.values.EntrenadorId;
+import co.com.sofka.entrenamiento.estudio.values.EntrenadorExpertoId;
 import co.com.sofka.entrenamiento.generalValues.Celular;
 import co.com.sofka.entrenamiento.generalValues.Correo;
 import co.com.sofka.entrenamiento.generalValues.Nombre;
 
-public class EntrenadorAgregado extends DomainEvent {
-    private final EntrenadorId entrenadorId;
+public class EntrenadorExpertoAgregado extends DomainEvent {
+    private final EntrenadorExpertoId entrenadorExpertoId;
     private final Nombre nombre;
     private final Celular celular;
     private final Correo correo;
 
-    public EntrenadorAgregado(EntrenadorId entrenadorId, Nombre nombre, Celular celular, Correo correo) {
-        super("sofka.actividad.entrenadoragregado");
-        this.entrenadorId = entrenadorId;
+    public EntrenadorExpertoAgregado(EntrenadorExpertoId entrenadorExpertoId, Nombre nombre, Celular celular, Correo correo) {
+        super("sofka.estudio.entrenadorexpertoagregado");
+        this.entrenadorExpertoId = entrenadorExpertoId;
         this.nombre = nombre;
         this.celular = celular;
         this.correo = correo;
     }
 
-    public EntrenadorId getEntrenadorId() {
-        return entrenadorId;
+    public EntrenadorExpertoId getEntrenadorExpertoId() {
+        return entrenadorExpertoId;
     }
 
     public Nombre getNombre() {

@@ -1,16 +1,6 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-t
-Ddomain/src/main/java/co/com/sofka/entrenamiento/estudio/Estudio.java,5\4\5450b0203159ae7f8bbbc385e4b9382790c248e0
-z
-Jdomain/src/main/java/co/com/sofka/entrenamiento/estudio/EstudioChange.java,1\6\16492dbe6bf2a8b1f3dff44219c71ba8347917ec
-~
-Ndomain/src/main/java/co/com/sofka/entrenamiento/estudio/EntrenadorExperto.java,9\b\9bcda4cc42cd11725e620aebf1002414a77b77ff
-w
-Gdomain/src/main/java/co/com/sofka/entrenamiento/estudio/Implemento.java,d\0\d02de692945daa39342e095dbd91a98735abb0fe
-t
-Ddomain/src/main/java/co/com/sofka/entrenamiento/estudio/Maquina.java,2\2\226fe17e2d5c191dc5f96d13c9b6b85b11aca7e4
 v
 Fdomain/src/main/java/co/com/sofka/entrenamiento/programa/Programa.java,2\f\2f31abcde2aa6410cd58a49534a4f7a2f8f1b766
 {
@@ -33,9 +23,3 @@ Udomain/src/main/java/co/com/sofka/entrenamiento/programa/values/FisioterapeutaI
 Tdomain/src/main/java/co/com/sofka/entrenamiento/programa/values/NutricionistaId.java,4\c\4ccaefdee18317094d3fa07c369e2cef22ddeaa0
 „
 Tdomain/src/main/java/co/com/sofka/entrenamiento/programa/values/MaestroDeYogaId.java,d\2\d2df5a8755e5f805eb19339fa9a2504b9f6ac45f
-}
-Mdomain/src/main/java/co/com/sofka/entrenamiento/estudio/values/MaquinaId.java,5\2\525903defc71b061118fcc33c028bf5533b68c54
-€
-Pdomain/src/main/java/co/com/sofka/entrenamiento/estudio/values/ImplementoId.java,f\7\f761aae4b11b0c28856381f06f3dfa3be51de666
-‡
-Wdomain/src/main/java/co/com/sofka/entrenamiento/estudio/values/EntrenadorExpertoId.java,9\0\900e8caaf972532ea305de32d8e0445d468faa7f
