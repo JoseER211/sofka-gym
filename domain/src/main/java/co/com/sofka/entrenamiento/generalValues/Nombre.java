@@ -1,4 +1,10 @@
 package co.com.sofka.entrenamiento.generalValues;
 
-public class Nombre {
+import co.com.sofka.domain.generic.ValueObject;
+
+public class Nombre implements ValueObject<String> {
+    @Override
+    public String value() {
+        return null;
+    }
 }
