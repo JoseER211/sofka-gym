@@ -12,7 +12,7 @@ public class ActividadChange extends EventChange {
         apply((ActividadCreada event) -> {
             actividad.nombre = event.getNombre();
             actividad.tiempo = event.getTiempo();
-            actividad.materials = new HashSet<>();
+            actividad.material = event.getMaterial();
             actividad.instruccion = event.getInstruccion();
             actividad.descripcion = event.getDescripcion();
         });

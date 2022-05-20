@@ -17,7 +17,7 @@ import java.util.Set;
 public class Actividad extends AggregateEvent<ActividadId> {
     protected Nombre nombre;
     protected Tiempo tiempo;
-    protected Set<Material> materials;
+    protected Material material;
     protected Instruccion instruccion;
     protected Descripcion descripcion;
     protected Set<Cliente> clientes;
@@ -26,9 +26,9 @@ public class Actividad extends AggregateEvent<ActividadId> {
     protected EstudioId estudioId;
     protected ProgramaId programaId;
 
-    public Actividad(ActividadId actividadId, Nombre nombre, Tiempo tiempo, Set<Material> materials, Instruccion instruccion, Descripcion descripcion) {
+    public Actividad(ActividadId actividadId, Nombre nombre, Tiempo tiempo, Material material, Instruccion instruccion, Descripcion descripcion) {
         super(actividadId);
-        appendChange(new ActividadCreada(nombre, tiempo, materials, instruccion, descripcion ));
+        appendChange(new ActividadCreada(nombre, tiempo, material, instruccion, descripcion ));
     }
 
     private Actividad(ActividadId actividadId){
@@ -69,8 +69,8 @@ public class Actividad extends AggregateEvent<ActividadId> {
         return tiempo;
     }
 
-    public Set<Material> getMaterials() {
-        return materials;
+    public Material getMaterial() {
+        return material;
     }
 
     public Instruccion getInstruccion() {

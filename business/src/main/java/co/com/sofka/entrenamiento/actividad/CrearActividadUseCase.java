@@ -14,7 +14,7 @@ public class CrearActividadUseCase extends UseCase<RequestCommand<CrearActividad
                 command.getActividadId(),
                 command.getNombre(),
                 command.getTiempo(),
-                command.getMaterials(),
+                command.getMaterial(),
                 command.getInstruccion(),
                 command.getDescripcion());
 

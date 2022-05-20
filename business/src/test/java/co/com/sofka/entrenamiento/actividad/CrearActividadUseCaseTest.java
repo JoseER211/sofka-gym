@@ -30,12 +30,11 @@ class CrearActividadUseCaseTest {
         ActividadId actividadId = ActividadId.of("nnn");
         Nombre nombre = new Nombre("Entrena el tren superior");
         Tiempo tiempo = new Tiempo(LocalTime.of(11,51));
-        Set<Material> materials = new HashSet<>();
-        materials.add(new Material("Pesas"));
+        Material material = new Material("Pesas");
         Instruccion instruccion = new Instruccion("Se hace así y asá");
         Descripcion descripcion = new Descripcion("Esta actividad sirve para esto y aquello");
 
-        var command = new CrearActividad(actividadId, nombre, tiempo, materials, instruccion, descripcion);
+        var command = new CrearActividad(actividadId, nombre, tiempo, material, instruccion, descripcion);
 
         var events = UseCaseHandler.getInstance()
                 .syncExecutor(crearActividadUseCase, new RequestCommand<>(command))
@@ -46,7 +45,7 @@ class CrearActividadUseCaseTest {
         Assertions.assertEquals("nnn", actividadCreada.aggregateRootId());
         Assertions.assertEquals("Entrena el tren superior", actividadCreada.getNombre().value());
         Assertions.assertEquals(LocalTime.of(11,51), actividadCreada.getTiempo().value());
-        Assertions.assertEquals(materials, actividadCreada.getMaterials());
+        Assertions.assertEquals("Pesas", actividadCreada.getMaterial().value());
         Assertions.assertEquals("Se hace así y asá", actividadCreada.getInstruccion().value());
         Assertions.assertEquals("Esta actividad sirve para esto y aquello", actividadCreada.getDescripcion().value());
 

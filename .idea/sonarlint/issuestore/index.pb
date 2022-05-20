@@ -1,25 +1,3 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-v
-Fdomain/src/main/java/co/com/sofka/entrenamiento/programa/Programa.java,2\f\2f31abcde2aa6410cd58a49534a4f7a2f8f1b766
-{
-Kdomain/src/main/java/co/com/sofka/entrenamiento/programa/Nutricionista.java,7\4\7490b53a90b1d920153dd4dc7fa6a2b41a656d09
-{
-Kdomain/src/main/java/co/com/sofka/entrenamiento/programa/MaestroDeYoga.java,3\e\3e6316391a9df458656f799982377372ca8585cf
-|
-Ldomain/src/main/java/co/com/sofka/entrenamiento/programa/Fisioterapeuta.java,e\4\e45ee7b64d3d645316f0280fa2edf5eee5991fb7
-|
-Ldomain/src/main/java/co/com/sofka/entrenamiento/programa/ProgramaChange.java,c\0\c066a2d4784ef83ad1ef77eebe741bb82371385d
-
-Odomain/src/main/java/co/com/sofka/entrenamiento/programa/values/Valoracion.java,a\3\a3fcf2e0c7abf96c29edc2d83ddbdad9ce3c80df
-†
-Vdomain/src/main/java/co/com/sofka/entrenamiento/programa/values/NumeroConsultorio.java,9\7\97da5209669ffabea2f89085e177fa26f584c151
-
-Odomain/src/main/java/co/com/sofka/entrenamiento/programa/values/ProgramaId.java,d\4\d488815b023c9db1b7bfe6aec884ad0f299393c7
-…
-Udomain/src/main/java/co/com/sofka/entrenamiento/programa/values/FisioterapeutaId.java,a\b\ab895abad6efaf39fb3607436eef93dbc4f50e6e
-„
-Tdomain/src/main/java/co/com/sofka/entrenamiento/programa/values/NutricionistaId.java,4\c\4ccaefdee18317094d3fa07c369e2cef22ddeaa0
-„
-Tdomain/src/main/java/co/com/sofka/entrenamiento/programa/values/MaestroDeYogaId.java,d\2\d2df5a8755e5f805eb19339fa9a2504b9f6ac45f
