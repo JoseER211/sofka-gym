@@ -13,16 +13,16 @@ public class EjercicioAgregado extends DomainEvent {
     private final Ronda ronda;
     private final Repeticion repeticion;
     private final Tiempo tiempo;
-    private final Set<Material> materials;
+    private final Material material;
     private final Descripcion descripcion;
-    public EjercicioAgregado(EjercicioId ejercicioId, Nombre nombre, Ronda ronda, Repeticion repeticion, Tiempo tiempo, Set<Material> materials, Descripcion descripcion) {
+    public EjercicioAgregado(EjercicioId ejercicioId, Nombre nombre, Ronda ronda, Repeticion repeticion, Tiempo tiempo, Material material, Descripcion descripcion) {
         super("sofka.actividad.ejercicioagregado");
         this.ejercicioId = ejercicioId;
         this.nombre = nombre;
         this.ronda = ronda;
         this.repeticion = repeticion;
         this.tiempo = tiempo;
-        this.materials = materials;
+        this.material = material;
         this.descripcion = descripcion;
     }
 
@@ -46,8 +46,8 @@ public class EjercicioAgregado extends DomainEvent {
         return tiempo;
     }
 
-    public Set<Material> getMaterials() {
-        return materials;
+    public Material getMaterial() {
+        return material;
     }
 
     public Descripcion getDescripcion() {

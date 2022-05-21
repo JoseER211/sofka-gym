@@ -22,8 +22,8 @@ public class Estudio extends AggregateEvent<EstudioId> {
     protected Nombre nombre;
     protected Descripcion descripcion;
     protected EntrenadorExperto entrenadorExperto;
-    protected Set<Implemento> implementos;
-    protected Set<Maquina> maquinas;
+    protected Implemento implemento;
+    protected Maquina maquina;
 
     public Estudio(EstudioId estudioId, Nombre nombre, Descripcion descripcion) {
         super(estudioId);
@@ -65,11 +65,11 @@ public class Estudio extends AggregateEvent<EstudioId> {
         return entrenadorExperto;
     }
 
-    public Set<Implemento> getImplementos() {
-        return implementos;
+    public Implemento getImplemento() {
+        return implemento;
     }
 
-    public Set<Maquina> getMaquinas() {
-        return maquinas;
+    public Maquina getMaquina() {
+        return maquina;
     }
 }

@@ -23,9 +23,9 @@ public class EstudioChange extends EventChange {
         ));
 
         apply((ImplementoAgregado event) ->
-                estudio.implementos.add(new Implemento(event.getImplementoId(), event.getNombre(),event.getDescripcion())));
+                estudio.implemento = new Implemento(event.getImplementoId(), event.getNombre(),event.getDescripcion()));
 
         apply((MaquinaAgregada event) ->
-                estudio.maquinas.add(new Maquina(event.getMaquinaId(), event.getNombre(),event.getDescripcion())));
+                estudio.maquina = new Maquina(event.getMaquinaId(), event.getNombre(),event.getDescripcion()));
     }
 }

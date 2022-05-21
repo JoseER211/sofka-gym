@@ -20,9 +20,9 @@ public class Actividad extends AggregateEvent<ActividadId> {
     protected Material material;
     protected Instruccion instruccion;
     protected Descripcion descripcion;
-    protected Set<Cliente> clientes;
+    protected Cliente cliente;
     protected Entrenador entrenador;
-    protected Set<Ejercicio> ejercicios;
+    protected Ejercicio ejercicio;
     protected EstudioId estudioId;
     protected ProgramaId programaId;
 
@@ -49,8 +49,8 @@ public class Actividad extends AggregateEvent<ActividadId> {
     public void agregarEntrenador(EntrenadorId entrenadorId, Nombre nombre, Celular celular, Correo correo){
         appendChange(new EntrenadorAgregado(entrenadorId, nombre, celular, correo)).apply();
     }
-    public void agregarEjercicio(EjercicioId ejercicioId, Nombre nombre, Ronda ronda, Repeticion repeticion, Tiempo tiempo, Set<Material> materials, Descripcion descripcion){
-        appendChange(new EjercicioAgregado(ejercicioId, nombre, ronda, repeticion, tiempo, materials, descripcion)).apply();
+    public void agregarEjercicio(EjercicioId ejercicioId, Nombre nombre, Ronda ronda, Repeticion repeticion, Tiempo tiempo, Material material, Descripcion descripcion){
+        appendChange(new EjercicioAgregado(ejercicioId, nombre, ronda, repeticion, tiempo, material, descripcion)).apply();
     }
 
     public void asociarEstudio(EstudioId estudioId){
@@ -81,16 +81,16 @@ public class Actividad extends AggregateEvent<ActividadId> {
         return descripcion;
     }
 
-    public Set<Cliente> getClientes() {
-        return clientes;
+    public Cliente getCliente() {
+        return cliente;
     }
 
     public Entrenador getEntrenador() {
         return entrenador;
     }
 
-    public Set<Ejercicio> getEjercicios() {
-        return ejercicios;
+    public Ejercicio getEjercicio() {
+        return ejercicio;
     }
 
     public EstudioId getEstudioId() {

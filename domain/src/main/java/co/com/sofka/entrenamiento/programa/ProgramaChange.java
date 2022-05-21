@@ -37,8 +37,7 @@ public class ProgramaChange extends EventChange {
                         event.getNumeroConsultorio()
                 ));
 
-        apply((ValoracionActualizada event) ->
-                programa.valoracion = event.getValoracion());
+
 
     }
 }

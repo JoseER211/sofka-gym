@@ -18,12 +18,12 @@ public class ActividadChange extends EventChange {
         });
 
         apply((ClienteAgregado event) ->
-                actividad.clientes.add(new Cliente(
+                actividad.cliente = new Cliente(
                         event.getClienteId(),
                         event.getIdentificacion(),
                         event.getNombre(),
                         event.getEdad(),
-                        event.getEps()))
+                        event.getEps())
         );
         apply((EntrenadorAgregado event) ->
                 actividad.entrenador = new Entrenador(
@@ -34,15 +34,14 @@ public class ActividadChange extends EventChange {
         );
 
         apply((EjercicioAgregado event) ->
-                actividad.ejercicios.add(new Ejercicio(
+                actividad.ejercicio = new Ejercicio(
                         event.getEjercicioId(),
                         event.getNombre(),
                         event.getRonda(),
                         event.getRepeticion(),
                         event.getTiempo(),
-                        event.getMaterials(),
-                        event.getDescripcion()))
-        );
+                        event.getMaterial(),
+                        event.getDescripcion()));
 
         apply((EstudioAsociado event) ->
                 actividad.estudioId = event.getEstudioId()

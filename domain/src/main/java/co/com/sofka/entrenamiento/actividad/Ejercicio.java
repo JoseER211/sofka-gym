@@ -12,25 +12,25 @@ public class Ejercicio extends Entity<EjercicioId> {
     private Ronda ronda;
     private Repeticion repeticion;
     private Tiempo tiempo;
-    private Set<Material> materials;
+    private Material material;
     private Descripcion descripcion;
 
-    public Ejercicio(EjercicioId ejercicioId, Nombre nombre, Ronda ronda, Repeticion repeticion, Tiempo tiempo, Set<Material> materials, Descripcion descripcion) {
+    public Ejercicio(EjercicioId ejercicioId, Nombre nombre, Ronda ronda, Repeticion repeticion, Tiempo tiempo, Material material, Descripcion descripcion) {
         super(ejercicioId);
         this.nombre = nombre;
         this.ronda = ronda;
         this.repeticion = repeticion;
         this.tiempo = tiempo;
-        this.materials = materials;
+        this.material = material;
         this.descripcion = descripcion;
     }
 
-    public void cambiarInformacion(Nombre nombre, Ronda ronda, Repeticion repeticion, Tiempo tiempo, Set<Material> materials, Descripcion descripcion){
+    public void cambiarInformacion(Nombre nombre, Ronda ronda, Repeticion repeticion, Tiempo tiempo, Material material, Descripcion descripcion){
         this.nombre = nombre;
         this.ronda = ronda;
         this.repeticion = repeticion;
         this.tiempo = tiempo;
-        this.materials = materials;
+        this.material = material;
         this.descripcion = descripcion;
     }
 
@@ -50,8 +50,8 @@ public class Ejercicio extends Entity<EjercicioId> {
         return tiempo;
     }
 
-    public Set<Material> getMaterials() {
-        return materials;
+    public Material getMaterial() {
+        return material;
     }
 
     public Descripcion getDescripcion() {

@@ -46,9 +46,6 @@ public class Programa extends AggregateEvent<ProgramaId> {
         appendChange(new NutricionistaAgregado(nutricionistaId, nombre, celular, correo, numeroConsultorio)).apply();
     }
 
-    public void actualizarValoracion(Valoracion valoracion){
-        appendChange(new ValoracionActualizada(valoracion)).apply();
-    }
 
     public Nombre getNombre() {
         return nombre;
