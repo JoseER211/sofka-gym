@@ -18,11 +18,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import javax.swing.*;
-
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -34,7 +31,7 @@ class AgregarImplementoUseCaseTest {
     private DomainEventRepository domainEventRepository;
 
     @Test
-    public void agregarImplemento(){
+    public void agregarImplemento() {
         EstudioId estudioId = EstudioId.of("xxx");
         ImplementoId implementoId = ImplementoId.of("iii");
         Nombre nombre = new Nombre("Lazo");
@@ -58,7 +55,7 @@ class AgregarImplementoUseCaseTest {
 
     }
 
-    private List<DomainEvent> history(){
+    private List<DomainEvent> history() {
         Nombre nombre = new Nombre("Estudio Rutina superior");
         Descripcion descripcion = new Descripcion("resuelve esto y aquello");
         var event = new EstudioCreado(nombre, descripcion);

@@ -2,9 +2,6 @@ package co.com.sofka.entrenamiento.actividad;
 
 import co.com.sofka.domain.generic.EventChange;
 import co.com.sofka.entrenamiento.actividad.events.*;
-import co.com.sofka.entrenamiento.actividad.values.ActividadId;
-
-import java.util.HashSet;
 
 public class ActividadChange extends EventChange {
 

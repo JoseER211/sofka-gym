@@ -10,20 +10,18 @@ import co.com.sofka.entrenamiento.programa.values.Valoracion;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Validate;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CrearProgramaUseCaseTest {
 
     private CrearProgramaUseCase crearProgramaUseCase;
+
     @BeforeEach
     void setUp() {
         crearProgramaUseCase = new CrearProgramaUseCase();
     }
 
     @Test
-    public void crearPrograma(){
+    public void crearPrograma() {
         ProgramaId programaId = ProgramaId.of("ppp");
         Nombre nombre = new Nombre("Entrenamiento de fuerza");
         Valoracion valoracion = new Valoracion(4.8);

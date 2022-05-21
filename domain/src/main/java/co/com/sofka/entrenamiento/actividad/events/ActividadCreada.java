@@ -7,8 +7,6 @@ import co.com.sofka.entrenamiento.actividad.values.Tiempo;
 import co.com.sofka.entrenamiento.generalValues.Descripcion;
 import co.com.sofka.entrenamiento.generalValues.Nombre;
 
-import java.util.Set;
-
 public class ActividadCreada extends DomainEvent {
 
     private final Nombre nombre;
@@ -17,7 +15,7 @@ public class ActividadCreada extends DomainEvent {
     private final Instruccion instruccion;
     private final Descripcion descripcion;
 
-    public ActividadCreada( Nombre nombre, Tiempo tiempo, Material material, Instruccion instruccion, Descripcion descripcion) {
+    public ActividadCreada(Nombre nombre, Tiempo tiempo, Material material, Instruccion instruccion, Descripcion descripcion) {
         super("sofka.actividad.actividadcreada");
         this.nombre = nombre;
         this.tiempo = tiempo;

@@ -13,7 +13,8 @@ public class NutricionistaAgregado extends DomainEvent {
     private final Celular celular;
     private final Correo correo;
     private final NumeroConsultorio numeroConsultorio;
-    public NutricionistaAgregado(NutricionistaId nutricionistaId, Nombre nombre, Celular celular, Correo correo, NumeroConsultorio numeroConsultorio ) {
+
+    public NutricionistaAgregado(NutricionistaId nutricionistaId, Nombre nombre, Celular celular, Correo correo, NumeroConsultorio numeroConsultorio) {
         super("sofka.programa.nutricionistaagregado");
         this.nutricionistaId = nutricionistaId;
         this.nombre = nombre;

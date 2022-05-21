@@ -22,7 +22,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.time.LocalTime;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -34,7 +33,7 @@ class AgregarEntrenadorUseCaseTest {
     private DomainEventRepository domainEventRepository;
 
     @Test
-    public void agregarEntrenador(){
+    public void agregarEntrenador() {
         ActividadId actividadId = ActividadId.of("xxx");
         EntrenadorId entrenadorId = EntrenadorId.of("eee");
         Nombre nombre = new Nombre("Rodolfo");
@@ -60,9 +59,9 @@ class AgregarEntrenadorUseCaseTest {
 
     }
 
-    private List<DomainEvent> history(){
+    private List<DomainEvent> history() {
         Nombre nombre = new Nombre("Entrena el tren superior");
-        Tiempo tiempo = new Tiempo(LocalTime.of(11,51));
+        Tiempo tiempo = new Tiempo(LocalTime.of(11, 51));
         Material material = new Material("Pesas");
         Instruccion instruccion = new Instruccion("Se hace así y asá");
         Descripcion descripcion = new Descripcion("Esta actividad sirve para esto y aquello");

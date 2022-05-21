@@ -9,11 +9,11 @@ public class Valoracion implements ValueObject<Double> {
 
     public Valoracion(Double value) {
         this.value = Objects.requireNonNull(value);
-        if (this.value < 1){
+        if (this.value < 1) {
             throw new IllegalArgumentException("La valoración no puede ser menor a 1");
         }
 
-        if (this.value > 5){
+        if (this.value > 5) {
             throw new IllegalArgumentException("La valoración no puede ser mayor a 5");
         }
     }

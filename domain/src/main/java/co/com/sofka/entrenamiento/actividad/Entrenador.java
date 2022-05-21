@@ -18,7 +18,7 @@ public class Entrenador extends Entity<EntrenadorId> {
         this.correo = correo;
     }
 
-    public void cambiarInformacion(Nombre nombre, Celular celular, Correo correo){
+    public void cambiarInformacion(Nombre nombre, Celular celular, Correo correo) {
         this.nombre = nombre;
         this.celular = celular;
         this.correo = correo;

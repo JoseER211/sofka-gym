@@ -10,7 +10,7 @@ public class Material implements ValueObject<String> {
     public Material(String value) {
         this.value = value;
 
-        if (this.value.length() > 200){
+        if (this.value.length() > 200) {
             throw new IllegalArgumentException("El material no puede contener más de 200 carácteres");
         }
     }

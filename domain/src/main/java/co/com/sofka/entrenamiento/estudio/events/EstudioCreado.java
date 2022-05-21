@@ -8,6 +8,7 @@ public class EstudioCreado extends DomainEvent {
 
     private final Nombre nombre;
     private final Descripcion descripcion;
+
     public EstudioCreado(Nombre nombre, Descripcion descripcion) {
         super("sofka.estudio.estudiocreado");
         this.nombre = nombre;

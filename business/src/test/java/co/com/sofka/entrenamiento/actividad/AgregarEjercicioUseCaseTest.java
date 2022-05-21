@@ -11,7 +11,6 @@ import co.com.sofka.entrenamiento.actividad.values.*;
 import co.com.sofka.entrenamiento.generalValues.Descripcion;
 import co.com.sofka.entrenamiento.generalValues.Nombre;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -21,7 +20,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.time.LocalTime;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -33,13 +31,13 @@ class AgregarEjercicioUseCaseTest {
     private DomainEventRepository domainEventRepository;
 
     @Test
-    public void agregarEjercicio(){
+    public void agregarEjercicio() {
         ActividadId actividadId = ActividadId.of("xxx");
         EjercicioId ejercicioId = EjercicioId.of("ttt");
         Nombre nombre = new Nombre("Dominada");
         Ronda ronda = new Ronda(3);
         Repeticion repeticion = new Repeticion(10);
-        Tiempo tiempo = new Tiempo(LocalTime.of(0,30));
+        Tiempo tiempo = new Tiempo(LocalTime.of(0, 30));
         Material material = new Material("Barra");
         Descripcion descripcion = new Descripcion("Sirve para esto y aquello");
         var command = new AgregarEjercicio(actividadId, ejercicioId, nombre, ronda, repeticion, tiempo, material, descripcion);
@@ -64,9 +62,9 @@ class AgregarEjercicioUseCaseTest {
         Assertions.assertEquals("Sirve para esto y aquello", ejercicioAgregado.getDescripcion().value());
     }
 
-    private List<DomainEvent> history(){
+    private List<DomainEvent> history() {
         Nombre nombre = new Nombre("Entrena el tren superior");
-        Tiempo tiempo = new Tiempo(LocalTime.of(11,51));
+        Tiempo tiempo = new Tiempo(LocalTime.of(11, 51));
         Material material = new Material("Pesas");
         Instruccion instruccion = new Instruccion("Se hace así y asá");
         Descripcion descripcion = new Descripcion("Esta actividad sirve para esto y aquello");

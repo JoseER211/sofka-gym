@@ -5,7 +5,10 @@ import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.entrenamiento.generalValues.Celular;
 import co.com.sofka.entrenamiento.generalValues.Correo;
 import co.com.sofka.entrenamiento.generalValues.Nombre;
-import co.com.sofka.entrenamiento.programa.events.*;
+import co.com.sofka.entrenamiento.programa.events.FisioterapeutaAgregado;
+import co.com.sofka.entrenamiento.programa.events.MaestroDeYogaAgregado;
+import co.com.sofka.entrenamiento.programa.events.NutricionistaAgregado;
+import co.com.sofka.entrenamiento.programa.events.ProgramaCreado;
 import co.com.sofka.entrenamiento.programa.values.*;
 
 import java.util.List;
@@ -22,27 +25,27 @@ public class Programa extends AggregateEvent<ProgramaId> {
         appendChange(new ProgramaCreado(nombre, valoracion));
     }
 
-    private Programa(ProgramaId programaId){
+    private Programa(ProgramaId programaId) {
         super(programaId);
         subscribe(new ProgramaChange(this));
     }
 
-    public static Programa from(ProgramaId programaId, List<DomainEvent> events){
+    public static Programa from(ProgramaId programaId, List<DomainEvent> events) {
         var programa = new Programa(programaId);
         events.forEach(programa::applyEvent);
         return programa;
 
     }
 
-    public void agregarFisioterapeuta(FisioterapeutaId fisioterapeutaId, Nombre nombre, Celular celular, Correo correo, NumeroConsultorio numeroConsultorio){
-        appendChange(new FisioterapeutaAgregado( fisioterapeutaId, nombre, celular, correo, numeroConsultorio)).apply();
+    public void agregarFisioterapeuta(FisioterapeutaId fisioterapeutaId, Nombre nombre, Celular celular, Correo correo, NumeroConsultorio numeroConsultorio) {
+        appendChange(new FisioterapeutaAgregado(fisioterapeutaId, nombre, celular, correo, numeroConsultorio)).apply();
     }
 
-    public void agregarMaestroDeYoga(MaestroDeYogaId maestroDeYogaId, Nombre nombre, Celular celular, Correo correo){
+    public void agregarMaestroDeYoga(MaestroDeYogaId maestroDeYogaId, Nombre nombre, Celular celular, Correo correo) {
         appendChange(new MaestroDeYogaAgregado(maestroDeYogaId, nombre, celular, correo)).apply();
     }
 
-    public void agregarNutricionista(NutricionistaId nutricionistaId, Nombre nombre, Celular celular, Correo correo, NumeroConsultorio numeroConsultorio){
+    public void agregarNutricionista(NutricionistaId nutricionistaId, Nombre nombre, Celular celular, Correo correo, NumeroConsultorio numeroConsultorio) {
         appendChange(new NutricionistaAgregado(nutricionistaId, nombre, celular, correo, numeroConsultorio)).apply();
     }
 

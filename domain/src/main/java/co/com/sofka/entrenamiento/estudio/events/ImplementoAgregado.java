@@ -9,6 +9,7 @@ public class ImplementoAgregado extends DomainEvent {
     private final ImplementoId implementoId;
     private final Nombre nombre;
     private final Descripcion descripcion;
+
     public ImplementoAgregado(ImplementoId implementoId, Nombre nombre, Descripcion descripcion) {
         super("sofka.estudio.implementoagregado");
         this.implementoId = implementoId;

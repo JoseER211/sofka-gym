@@ -6,7 +6,6 @@ import co.com.sofka.entrenamiento.generalValues.Correo;
 import co.com.sofka.entrenamiento.generalValues.Nombre;
 import co.com.sofka.entrenamiento.programa.values.FisioterapeutaId;
 import co.com.sofka.entrenamiento.programa.values.NumeroConsultorio;
-import co.com.sofka.entrenamiento.programa.values.ProgramaId;
 
 public class FisioterapeutaAgregado extends DomainEvent {
 

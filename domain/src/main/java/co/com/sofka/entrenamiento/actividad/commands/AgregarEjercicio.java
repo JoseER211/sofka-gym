@@ -5,8 +5,6 @@ import co.com.sofka.entrenamiento.actividad.values.*;
 import co.com.sofka.entrenamiento.generalValues.Descripcion;
 import co.com.sofka.entrenamiento.generalValues.Nombre;
 
-import java.util.Set;
-
 public class AgregarEjercicio extends Command {
     private final ActividadId actividadId;
     private final EjercicioId ejercicioId;

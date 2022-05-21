@@ -14,22 +14,21 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalTime;
-import java.util.HashSet;
-import java.util.Set;
 
 class CrearActividadUseCaseTest {
 
     private CrearActividadUseCase crearActividadUseCase;
+
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
         crearActividadUseCase = new CrearActividadUseCase();
     }
 
     @Test
-    public void crearActividad(){
+    public void crearActividad() {
         ActividadId actividadId = ActividadId.of("nnn");
         Nombre nombre = new Nombre("Entrena el tren superior");
-        Tiempo tiempo = new Tiempo(LocalTime.of(11,51));
+        Tiempo tiempo = new Tiempo(LocalTime.of(11, 51));
         Material material = new Material("Pesas");
         Instruccion instruccion = new Instruccion("Se hace así y asá");
         Descripcion descripcion = new Descripcion("Esta actividad sirve para esto y aquello");
@@ -44,7 +43,7 @@ class CrearActividadUseCaseTest {
         var actividadCreada = (ActividadCreada) events.get(0);
         Assertions.assertEquals("nnn", actividadCreada.aggregateRootId());
         Assertions.assertEquals("Entrena el tren superior", actividadCreada.getNombre().value());
-        Assertions.assertEquals(LocalTime.of(11,51), actividadCreada.getTiempo().value());
+        Assertions.assertEquals(LocalTime.of(11, 51), actividadCreada.getTiempo().value());
         Assertions.assertEquals("Pesas", actividadCreada.getMaterial().value());
         Assertions.assertEquals("Se hace así y asá", actividadCreada.getInstruccion().value());
         Assertions.assertEquals("Esta actividad sirve para esto y aquello", actividadCreada.getDescripcion().value());

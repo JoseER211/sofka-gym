@@ -9,7 +9,7 @@ public class EPS implements ValueObject<String> {
 
     public EPS(String value) {
         this.value = Objects.requireNonNull(value);
-        if(this.value.isBlank()){
+        if (this.value.isBlank()) {
             throw new IllegalArgumentException("La EPS no puede estar vacía");
         }
     }

@@ -4,7 +4,6 @@ import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.entrenamiento.actividad.values.ActividadId;
 import co.com.sofka.entrenamiento.estudio.commands.AgregarEntrenadorExperto;
 import co.com.sofka.entrenamiento.estudio.events.EntrenadorExpertoAgregado;
 import co.com.sofka.entrenamiento.estudio.events.EstudioCreado;
@@ -23,7 +22,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -35,7 +33,7 @@ class AgregarEntrenadorExpertoUseCaseTest {
     private DomainEventRepository domainEventRepository;
 
     @Test
-    public void agregarEntrenadorExperto(){
+    public void agregarEntrenadorExperto() {
         EstudioId estudioId = EstudioId.of("xxx");
         EntrenadorExpertoId entrenadorExpertoId = EntrenadorExpertoId.of("mmm");
         Nombre nombre = new Nombre("Mauro");
@@ -61,7 +59,7 @@ class AgregarEntrenadorExpertoUseCaseTest {
     }
 
 
-    private List<DomainEvent> history(){
+    private List<DomainEvent> history() {
         Nombre nombre = new Nombre("Estudio Rutina superior");
         Descripcion descripcion = new Descripcion("resuelve esto y aquello");
         var event = new EstudioCreado(nombre, descripcion);

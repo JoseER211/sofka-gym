@@ -23,7 +23,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -35,7 +34,7 @@ class AgregarFisioterapeutaUseCaseTest {
     private DomainEventRepository domainEventRepository;
 
     @Test
-    public void agregarFisioterapeuta(){
+    public void agregarFisioterapeuta() {
         ProgramaId programaId = ProgramaId.of("xxx");
         FisioterapeutaId fisioterapeutaId = FisioterapeutaId.of("fff");
         Nombre nombre = new Nombre("Alfonso");
@@ -62,7 +61,8 @@ class AgregarFisioterapeutaUseCaseTest {
         Assertions.assertEquals("Alfonso@gmail.com", fisioterapeutaAgregado.getCorreo().value());
         Assertions.assertEquals(1, fisioterapeutaAgregado.getNumeroConsultorio().value());
     }
-    private List<DomainEvent> history(){
+
+    private List<DomainEvent> history() {
         Nombre nombre = new Nombre("Entrenamiento de fuerza");
         Valoracion valoracion = new Valoracion(4.8);
         var event = new ProgramaCreado(nombre, valoracion);

@@ -9,11 +9,11 @@ public class Descripcion implements ValueObject<String> {
 
     public Descripcion(String value) {
         this.value = Objects.requireNonNull(value);
-        if(this.value.isBlank()){
-            throw  new IllegalArgumentException("La descripción no puede estar vacía");
+        if (this.value.isBlank()) {
+            throw new IllegalArgumentException("La descripción no puede estar vacía");
         }
-        if (this.value.length() > 400){
-            throw  new IllegalArgumentException("La descripción no puede contener más de 400 carácteres");
+        if (this.value.length() > 400) {
+            throw new IllegalArgumentException("La descripción no puede contener más de 400 carácteres");
         }
     }
 

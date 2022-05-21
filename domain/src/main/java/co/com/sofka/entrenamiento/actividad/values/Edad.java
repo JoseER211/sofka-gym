@@ -11,7 +11,7 @@ public class Edad implements ValueObject<Integer> {
     public Edad(Integer value) {
         this.value = Objects.requireNonNull(value);
 
-        if (this.value < 8){
+        if (this.value < 8) {
             throw new IllegalArgumentException("La edad no puede ser menor a 8");
         }
     }

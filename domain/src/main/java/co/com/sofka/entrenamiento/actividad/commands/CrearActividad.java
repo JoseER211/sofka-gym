@@ -8,8 +8,6 @@ import co.com.sofka.entrenamiento.actividad.values.Tiempo;
 import co.com.sofka.entrenamiento.generalValues.Descripcion;
 import co.com.sofka.entrenamiento.generalValues.Nombre;
 
-import java.util.Set;
-
 public class CrearActividad extends Command {
     private final ActividadId actividadId;
     private final Nombre nombre;

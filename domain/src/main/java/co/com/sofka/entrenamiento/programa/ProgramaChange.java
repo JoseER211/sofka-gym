@@ -1,7 +1,10 @@
 package co.com.sofka.entrenamiento.programa;
 
 import co.com.sofka.domain.generic.EventChange;
-import co.com.sofka.entrenamiento.programa.events.*;
+import co.com.sofka.entrenamiento.programa.events.FisioterapeutaAgregado;
+import co.com.sofka.entrenamiento.programa.events.MaestroDeYogaAgregado;
+import co.com.sofka.entrenamiento.programa.events.NutricionistaAgregado;
+import co.com.sofka.entrenamiento.programa.events.ProgramaCreado;
 
 public class ProgramaChange extends EventChange {
 
@@ -36,7 +39,6 @@ public class ProgramaChange extends EventChange {
                         event.getCorreo(),
                         event.getNumeroConsultorio()
                 ));
-
 
 
     }

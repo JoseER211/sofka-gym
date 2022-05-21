@@ -5,7 +5,6 @@ import co.com.sofka.entrenamiento.actividad.values.*;
 import co.com.sofka.entrenamiento.generalValues.Descripcion;
 import co.com.sofka.entrenamiento.generalValues.Nombre;
 
-import java.util.Set;
 
 public class Ejercicio extends Entity<EjercicioId> {
     private Nombre nombre;
@@ -25,7 +24,7 @@ public class Ejercicio extends Entity<EjercicioId> {
         this.descripcion = descripcion;
     }
 
-    public void cambiarInformacion(Nombre nombre, Ronda ronda, Repeticion repeticion, Tiempo tiempo, Material material, Descripcion descripcion){
+    public void cambiarInformacion(Nombre nombre, Ronda ronda, Repeticion repeticion, Tiempo tiempo, Material material, Descripcion descripcion) {
         this.nombre = nombre;
         this.ronda = ronda;
         this.repeticion = repeticion;

@@ -16,7 +16,7 @@ import co.com.sofka.entrenamiento.generalValues.Descripcion;
 import co.com.sofka.entrenamiento.generalValues.Nombre;
 
 import java.util.List;
-import java.util.Set;
+
 
 public class Estudio extends AggregateEvent<EstudioId> {
     protected Nombre nombre;
@@ -30,26 +30,26 @@ public class Estudio extends AggregateEvent<EstudioId> {
         appendChange(new EstudioCreado(nombre, descripcion));
     }
 
-    private Estudio(EstudioId estudioId){
+    private Estudio(EstudioId estudioId) {
         super(estudioId);
         subscribe(new EstudioChange(this));
     }
 
-    public static Estudio from(EstudioId estudioId, List<DomainEvent> events){
+    public static Estudio from(EstudioId estudioId, List<DomainEvent> events) {
         var estudio = new Estudio(estudioId);
         events.forEach(estudio::applyEvent);
         return estudio;
     }
 
-    public void agregarEntrenadorExperto(EntrenadorExpertoId entrenadorExpertoId, Nombre nombre, Celular celular, Correo correo){
+    public void agregarEntrenadorExperto(EntrenadorExpertoId entrenadorExpertoId, Nombre nombre, Celular celular, Correo correo) {
         appendChange(new EntrenadorExpertoAgregado(entrenadorExpertoId, nombre, celular, correo)).apply();
     }
 
-    public void agregarImplemento(ImplementoId implementoId, Nombre nombre, Descripcion descripcion){
+    public void agregarImplemento(ImplementoId implementoId, Nombre nombre, Descripcion descripcion) {
         appendChange(new ImplementoAgregado(implementoId, nombre, descripcion)).apply();
     }
 
-    public void agregarMaquina(MaquinaId maquinaId, Nombre nombre, Descripcion descripcion){
+    public void agregarMaquina(MaquinaId maquinaId, Nombre nombre, Descripcion descripcion) {
         appendChange(new MaquinaAgregada(maquinaId, nombre, descripcion)).apply();
     }
 

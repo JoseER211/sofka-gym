@@ -20,11 +20,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.time.LocalTime;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-
 class AgregarClienteUseCaseTest {
     @InjectMocks
     private AgregarClienteUseCase agregarClienteUseCase;
@@ -33,7 +31,7 @@ class AgregarClienteUseCaseTest {
     private DomainEventRepository domainEventRepository;
 
     @Test
-    public void agregarCliente(){
+    public void agregarCliente() {
         ActividadId actividadId = ActividadId.of("xxx");
         ClienteId clienteId = ClienteId.of("ccc");
         Identificacion identificacion = new Identificacion(4);
@@ -60,9 +58,9 @@ class AgregarClienteUseCaseTest {
         Assertions.assertEquals("SURA", clienteAgregado.getEps().value());
     }
 
-    private List<DomainEvent> history(){
+    private List<DomainEvent> history() {
         Nombre nombre = new Nombre("Entrena el tren superior");
-        Tiempo tiempo = new Tiempo(LocalTime.of(11,51));
+        Tiempo tiempo = new Tiempo(LocalTime.of(11, 51));
         Material material = new Material("Pesas");
         Instruccion instruccion = new Instruccion("Se hace así y asá");
         Descripcion descripcion = new Descripcion("Esta actividad sirve para esto y aquello");

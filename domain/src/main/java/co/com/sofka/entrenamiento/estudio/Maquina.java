@@ -1,7 +1,6 @@
 package co.com.sofka.entrenamiento.estudio;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.entrenamiento.estudio.values.ImplementoId;
 import co.com.sofka.entrenamiento.estudio.values.MaquinaId;
 import co.com.sofka.entrenamiento.generalValues.Descripcion;
 import co.com.sofka.entrenamiento.generalValues.Nombre;

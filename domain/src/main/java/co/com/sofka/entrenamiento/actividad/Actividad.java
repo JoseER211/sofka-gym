@@ -12,7 +12,7 @@ import co.com.sofka.entrenamiento.generalValues.Nombre;
 import co.com.sofka.entrenamiento.programa.values.ProgramaId;
 
 import java.util.List;
-import java.util.Set;
+
 
 public class Actividad extends AggregateEvent<ActividadId> {
     protected Nombre nombre;
@@ -28,36 +28,37 @@ public class Actividad extends AggregateEvent<ActividadId> {
 
     public Actividad(ActividadId actividadId, Nombre nombre, Tiempo tiempo, Material material, Instruccion instruccion, Descripcion descripcion) {
         super(actividadId);
-        appendChange(new ActividadCreada(nombre, tiempo, material, instruccion, descripcion ));
+        appendChange(new ActividadCreada(nombre, tiempo, material, instruccion, descripcion));
     }
 
-    private Actividad(ActividadId actividadId){
+    private Actividad(ActividadId actividadId) {
         super(actividadId);
         subscribe(new ActividadChange(this));
     }
 
-    public static Actividad from(ActividadId actividadId, List<DomainEvent> events){
+    public static Actividad from(ActividadId actividadId, List<DomainEvent> events) {
         var actividad = new Actividad(actividadId);
         events.forEach(actividad::applyEvent);
         return actividad;
     }
 
-    public void agregarCliente(ClienteId clienteId, Identificacion identificacion, Nombre nombre, Edad edad, EPS eps){
+    public void agregarCliente(ClienteId clienteId, Identificacion identificacion, Nombre nombre, Edad edad, EPS eps) {
         appendChange(new ClienteAgregado(clienteId, identificacion, nombre, edad, eps)).apply();
     }
 
-    public void agregarEntrenador(EntrenadorId entrenadorId, Nombre nombre, Celular celular, Correo correo){
+    public void agregarEntrenador(EntrenadorId entrenadorId, Nombre nombre, Celular celular, Correo correo) {
         appendChange(new EntrenadorAgregado(entrenadorId, nombre, celular, correo)).apply();
     }
-    public void agregarEjercicio(EjercicioId ejercicioId, Nombre nombre, Ronda ronda, Repeticion repeticion, Tiempo tiempo, Material material, Descripcion descripcion){
+
+    public void agregarEjercicio(EjercicioId ejercicioId, Nombre nombre, Ronda ronda, Repeticion repeticion, Tiempo tiempo, Material material, Descripcion descripcion) {
         appendChange(new EjercicioAgregado(ejercicioId, nombre, ronda, repeticion, tiempo, material, descripcion)).apply();
     }
 
-    public void asociarEstudio(EstudioId estudioId){
+    public void asociarEstudio(EstudioId estudioId) {
         appendChange(new EstudioAsociado(estudioId)).apply();
     }
 
-    public void asociarPrograma(ProgramaId programaId){
+    public void asociarPrograma(ProgramaId programaId) {
         appendChange(new ProgramaAsociado(programaId)).apply();
     }
 

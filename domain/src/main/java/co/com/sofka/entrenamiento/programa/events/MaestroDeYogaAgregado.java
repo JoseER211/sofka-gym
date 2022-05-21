@@ -11,6 +11,7 @@ public class MaestroDeYogaAgregado extends DomainEvent {
     private final Nombre nombre;
     private final Celular celular;
     private final Correo correo;
+
     public MaestroDeYogaAgregado(MaestroDeYogaId maestroDeYogaId, Nombre nombre, Celular celular, Correo correo) {
         super("sofka.programa.maestrodeyogaagregado");
         this.maestroDeYogaId = maestroDeYogaId;

@@ -11,18 +11,17 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class CrearEstudioUseCaseTest {
 
     private CrearEstudioUseCase crearEstudioUseCase;
+
     @BeforeEach
     void setUp() {
         crearEstudioUseCase = new CrearEstudioUseCase();
     }
 
     @Test
-    public void crearEstudio(){
+    public void crearEstudio() {
         EstudioId estudioId = EstudioId.of("eee");
         Nombre nombre = new Nombre("Estudio Rutina superior");
         Descripcion descripcion = new Descripcion("resuelve esto y aquello");

@@ -21,7 +21,7 @@ public class Cliente extends Entity<ClienteId> {
         this.eps = eps;
     }
 
-    public void cambiarInformacion(Identificacion identificacion, Nombre nombre, Edad edad, EPS eps){
+    public void cambiarInformacion(Identificacion identificacion, Nombre nombre, Edad edad, EPS eps) {
         this.identificacion = identificacion;
         this.nombre = nombre;
         this.edad = edad;

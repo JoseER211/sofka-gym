@@ -4,15 +4,15 @@ import co.com.sofka.domain.generic.Identity;
 
 public class EntrenadorId extends Identity {
 
-    public EntrenadorId(){
+    public EntrenadorId() {
 
     }
 
-    private EntrenadorId(String id){
+    private EntrenadorId(String id) {
         super(id);
     }
 
-    public static EntrenadorId of(String id){
+    public static EntrenadorId of(String id) {
         return new EntrenadorId(id);
     }
 }

@@ -7,6 +7,7 @@ import co.com.sofka.entrenamiento.programa.values.Valoracion;
 public class ProgramaCreado extends DomainEvent {
     private final Nombre nombre;
     private final Valoracion valoracion;
+
     public ProgramaCreado(Nombre nombre, Valoracion valoracion) {
         super("sofka.programa.programacreado");
         this.nombre = nombre;

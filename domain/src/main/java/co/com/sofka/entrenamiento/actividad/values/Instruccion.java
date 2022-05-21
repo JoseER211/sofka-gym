@@ -9,10 +9,10 @@ public class Instruccion implements ValueObject<String> {
 
     public Instruccion(String value) {
         this.value = Objects.requireNonNull(value);
-        if(this.value.isBlank()){
+        if (this.value.isBlank()) {
             throw new IllegalArgumentException("La instrucción no puede estar vacía");
         }
-        if (this.value.length() > 400){
+        if (this.value.length() > 400) {
             throw new IllegalArgumentException("La instrucción no puede contener más de 400 carácteres");
         }
     }

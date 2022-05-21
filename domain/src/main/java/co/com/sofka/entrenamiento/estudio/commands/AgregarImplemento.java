@@ -1,7 +1,6 @@
 package co.com.sofka.entrenamiento.estudio.commands;
 
 import co.com.sofka.domain.generic.Command;
-import co.com.sofka.entrenamiento.estudio.Implemento;
 import co.com.sofka.entrenamiento.estudio.values.EstudioId;
 import co.com.sofka.entrenamiento.estudio.values.ImplementoId;
 import co.com.sofka.entrenamiento.generalValues.Descripcion;
