@@ -35,7 +35,7 @@ public class Programa extends AggregateEvent<ProgramaId> {
     }
 
     public void agregarFisioterapeuta(FisioterapeutaId fisioterapeutaId, Nombre nombre, Celular celular, Correo correo, NumeroConsultorio numeroConsultorio){
-        appendChange(new FisioterapeutaAgregado(fisioterapeutaId, nombre, celular, correo, numeroConsultorio)).apply();
+        appendChange(new FisioterapeutaAgregado( fisioterapeutaId, nombre, celular, correo, numeroConsultorio)).apply();
     }
 
     public void agregarMaestroDeYoga(MaestroDeYogaId maestroDeYogaId, Nombre nombre, Celular celular, Correo correo){
